@@ -1,8 +1,7 @@
 # Pendataan PDAM
-## Kelompok Web-Service
-> project RESTFUL API pendataaan pdam untuk project mata kuliah Web Service
-> dengan anggota kelompok sebagai berikut :
-> * Achmad Yusuf Subagja
-> * Alian Hakim
+Back-End RESTFUL API project PDAM Data Collection 
+> Leader : Alian Hakim
+Project Maintainers : 
+> * Achmad Yusuf Subagja 
 > * Hana Miratul Mar'ah
 > * Ilham Alfath
