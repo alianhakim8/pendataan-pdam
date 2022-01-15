@@ -1,6 +1,8 @@
 <?php
 
 use App\Http\Controllers\API\AuthController;
+use App\Http\Controllers\API\KecamatanController;
+use App\Http\Controllers\API\PelangganController;
 use App\Http\Controllers\API\TagihanController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
@@ -34,12 +36,23 @@ Route::group(['middleware' => ['auth:sanctum']], function () {
     // API route for logout user
     Route::post('/logout', [AuthController::class, 'logout']);
 
+    // Route::prefix('/tagihan')->group(function () {
+    //     Route::post('/tambah', [TagihanController::class, 'store']);
+    //     Route::get('/tampil', [TagihanController::class, 'index']);
+    //     Route::get('/tampil/{id}', [TagihanController::class, 'show']);
+    //     Route::put('/ubah/{id}', [TagihanController::class, 'update']);
+    //     Route::delete('/hapus/{id}', [TagihanController::class, 'destroy']);
+    // });
+
     // API route for tagihan
-    Route::prefix('/tagihan')->group(function () {
-        Route::post('/tambah', [TagihanController::class, 'store']);
-        Route::get('/tampil', [TagihanController::class, 'index']);
-        Route::get('/tampil/{id}', [TagihanController::class, 'show']);
-        Route::put('/ubah/{id}', [TagihanController::class, 'update']);
-        Route::delete('/hapus/{id}', [TagihanController::class, 'destroy']);
-    });
+    Route::resource('tagihans', TagihanController::class);
+
+    // API route for kecamatan
+    Route::resource('kecamatans', KecamatanController::class);
+
+    // API route for Kelurahan
+
+
+    // API route for Pelanggan
+    Route::resource('pelanggans', PelangganController::class);
 });

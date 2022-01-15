@@ -51,17 +51,6 @@ class TagihanController extends Controller
             ]);
         }
 
-        // $data = new Tagihan();
-        // $data->id_pelanggan = $request->post('id_pelanggan');
-        // $data->tahun = $request->post('tahun');
-        // $data->bulan = $request->post('bulan');
-        // $data->meter_kubik = $request->post('meter_kubik');
-        // $data->jml_bayar = $request->post('jml_bayar');
-        // $data->jml_tagih = $jml_tagihan;
-        // $data->tgl_bayar = $request->post('tgl_bayar');
-
-        // $data->save();
-
         $data = new Tagihan();
         $data->id_pelanggan = $request->input('id_pelanggan');
         $data->tahun = $request->input('tahun');
